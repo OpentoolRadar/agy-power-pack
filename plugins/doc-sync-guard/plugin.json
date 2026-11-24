@@ -1,0 +1,12 @@
+{
+  "name": "doc-sync-guard",
+  "displayName": "Doc Sync Guard",
+  "description": "Always-on documentation synchronization rules: update READMEs, indexes, CLI flags, cross-references, and measured stats in the same turn as code or data changes, while preserving cross-platform parity across Windows, macOS, and Linux.",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Audit recent code and config changes in this workspace and synchronize all affected docs and index tables",
+    "Verify that every path link, CLI command, and metric in README.md matches the current repository state",
+    "Add the newly created scripts and modules into the top-level documentation index"
+  ]
+}

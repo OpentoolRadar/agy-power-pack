@@ -1,0 +1,12 @@
+{
+  "name": "office-preview",
+  "displayName": "Office Preview",
+  "version": "1.0.0",
+  "description": "High-fidelity sidecar viewer for PowerPoint, Word, Excel, CSV, and PDF files inside Antigravity, with full support for threaded comments, anchor quotes, speaker notes, footnotes, tracked changes, and multi-sheet grids. Zero external npm dependencies; works on Linux, macOS, and Windows.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Open the Office Preview panel",
+    "Preview the PowerPoint deck in this workspace and inspect its speaker notes and comments",
+    "Extract all review comments and tracked changes from this Word document"
+  ]
+}

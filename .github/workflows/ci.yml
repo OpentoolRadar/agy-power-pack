@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check JavaScript and ESM syntax
+        run: |
+          find plugins scripts -type f \( -name '*.js' -o -name '*.mjs' \) -print0 | xargs -0 -n1 node --check
+
+      - name: Check Python syntax
+        run: |
+          find plugins -type f -name '*.py' -print0 | xargs -0 -n1 python3 -m py_compile
+
+      - name: Check Bash scripts syntax
+        run: |
+          bash -n install.sh
+          find plugins -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n
+
+      - name: Run sanitization and manifest audit
+        run: node scripts/audit-sanitization.mjs

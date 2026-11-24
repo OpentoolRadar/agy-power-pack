@@ -1,0 +1,12 @@
+{
+  "name": "anti-drift-guard",
+  "displayName": "Anti-Drift Guard",
+  "description": "Always-on anti-hallucination and compaction-resilience rules: persist locked user decisions to disk, prevent multi-agent/Swarm silent rollbacks, verify workspace roots by modification time, and ban ungrounded claims about history or black-box checks.",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Persist all locked decisions and protected constraints from this phase into a workspace document",
+    "Verify the actual git and file timeline behind the discrepancy between the current file and the latest report",
+    "Audit whether our recent edits touched any previously verified sections that now require re-testing"
+  ]
+}

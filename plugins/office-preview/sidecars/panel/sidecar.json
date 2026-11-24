@@ -1,0 +1,18 @@
+{
+  "command": "node",
+  "args": ["main.mjs"],
+  "restart_policy": "always",
+  "display_name": "Office Preview",
+  "description": "High-fidelity preview for PowerPoint, Word, Excel, CSV, and PDF files with comments, speaker notes, footnotes, tracked changes, and interactive sheets.",
+  "has_web_ui": true,
+  "ui_config": {
+    "display_name": "Office Preview",
+    "views": [
+      {
+        "path": "/",
+        "entrypoint": "SIDECAR_UI_ENTRYPOINT_AUX_PANE",
+        "title": "Office Preview"
+      }
+    ]
+  }
+}

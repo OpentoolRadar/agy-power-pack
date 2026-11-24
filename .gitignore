@@ -1,0 +1,27 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / Build
+node_modules/
+npm-debug.log*
+.cache/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+*.log

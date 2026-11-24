@@ -1,0 +1,12 @@
+{
+  "name": "unattended-watchdog",
+  "displayName": "Unattended Watchdog",
+  "description": "Always-on deadlock prevention and self-healing rules for long-running background commands and subagents: mandatory conditional watchdog timers (TimerCondition), process-level test timeouts, and deadlock-free concurrency testing patterns.",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Run an unattended workspace-wide audit and test fix with watchdog timers attached",
+    "Dispatch parallel subagents for refactoring and guard them with conditional timeouts",
+    "Diagnose the currently hung background test suite or deadlocked process"
+  ]
+}

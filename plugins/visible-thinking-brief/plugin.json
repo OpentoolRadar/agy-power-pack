@@ -1,0 +1,12 @@
+{
+  "name": "visible-thinking-brief",
+  "displayName": "Visible Thinking Brief",
+  "description": "Eliminate black-box tool spinners: instructs the agent to emit a crisp 1-2 sentence plain-prose brief before every tool batch explaining what was observed and why the next action is running, automatically matching the user's language.",
+  "version": "1.0.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Audit the authentication flow in this repository and explain each inspection step briefly as you go",
+    "Trace why the integration tests are flaky and narrate each diagnostic command before running it",
+    "Compare the two candidate architectures and state what each file lookup is verifying"
+  ]
+}

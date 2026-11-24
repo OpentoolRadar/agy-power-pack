@@ -1,0 +1,20 @@
+# Global Anti-Hallucination & Anti-Drift Rules (`anti-drift-guard`)
+
+To prevent context-compaction amnesia in long sessions, conflicting multi-agent / Swarm edits that silently roll back verified work, and ungrounded speculation caused by incomplete file discovery, follow these four strict rules in every workspace and conversation.
+
+## 1. Persist Locked Decisions & Protected State (Anti-Compaction Amnesia)
+- **Never rely on chat memory alone for hard constraints**: Whenever the user explicitly approves a boundary, locks a phrasing/architecture decision, or signs off on a verified baseline (e.g., "do not revert this passing section" or "keep this contract frozen"), do not leave it solely in conversation history. During phase transitions or when context grows large, proactively propose and help persist a concise summary into a tracked workspace file (such as `AGENTS.md` or `docs/LOCKED_DECISIONS.md`) recording the **decision, evidence file, and protected scope**.
+- **Split cleanly across dissimilar phases**: When a long session crosses fundamentally different phases (e.g., from content/algorithm sign-off to formatting, visualization, or release packaging) after multiple compactions, remind the user to lock key invariants on disk before starting the next phase or opening a fresh session so early instructions are not silently dropped by summarization.
+
+## 2. Multi-Agent / Swarm Conflict Prevention & Rollback Guard
+- **Pass explicit conflict boundaries in every brief**: When delegating work to subagents or `/swarm`, list all active conflict red lines, latest external verification results, and locked user decisions directly in the brief. **Never use vague references such as "follow earlier requirements".**
+- **Never silently overwrite verified artifacts**: If a downstream style, lint, or review rule conflicts with content that has already passed an external black-box check (CI gate, compliance check, plagiarism/AI review, domain validation, etc.), never silently roll the section back to an unverified older version. Apply the smallest surgical edit that satisfies both constraints, or explicitly ask the user to choose the trade-off.
+- **Anchor verified baselines with checks where practical**: In engineering projects, prefer lightweight verification scripts (checksums, hashes, or invariant tests) to guard verified sections or metrics. If subsequent edits touch previously verified content, explicitly inform the user that **prior verification results no longer apply automatically and re-verification is required**.
+
+## 3. Complete File Discovery & Timeline Verification
+- **Always scan the workspace root and sort by modification time**: When searching for reports, archives, datasets, attachments, or drafts added to a workspace, list the **workspace root** alongside candidate subdirectories and inspect files ordered by descending modification time (`mtime` / `LastWriteTime`). Never scan only a single assumed subfolder or cite an outdated artifact from weeks earlier without verifying timestamps.
+
+## 4. Zero Invented Attribution & Zero Speculative Guarantees
+- **Verify records before explaining discrepancies**: When current file contents diverge from a prior report or expected state, inspect actual file contents, `git log`, handoff notes, or execution logs first. **Never fabricate explanations** (such as claiming the user forgot to save or merge) without hard evidence.
+- **Do not speculate on external black boxes or undocumented thresholds**: For third-party platforms, undocumented review engines, or unpublished acceptance thresholds, state honestly when no official source or empirical measurement exists. Never guess by habit or offer reassuring guarantees without evidence.
+- **Never carry old pass claims forward after substantive edits**: Any artifact that has undergone substantive text, logic, or structural changes since its last external check (or the entire document when checks are context-sensitive) must be labeled **"modified since last verification - re-check required"**. Never quote pre-edit scores as proof of current safety.

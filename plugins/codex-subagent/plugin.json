@@ -1,0 +1,12 @@
+{
+  "name": "codex-subagent",
+  "displayName": "Codex Subagent",
+  "description": "Wrap your locally installed OpenAI Codex CLI as an Antigravity subagent and skill: run isolated read-only code reviews (codex exec review), cross-model second opinions (codex exec -s read-only), scoped edits, git worktrees, image/schema inputs, session resume, and multi-account CODEX_HOME switching.",
+  "version": "1.2.0",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "List all configured Codex accounts and their current login status",
+    "Initialize a second isolated Codex account profile and show the login command",
+    "Use Codex account 2 in read-only mode to review all uncommitted changes in this repository"
+  ]
+}
