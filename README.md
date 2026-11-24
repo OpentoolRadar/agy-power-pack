@@ -111,16 +111,16 @@ After installing, open **Google Antigravity -> Customizations -> Plugins** and t
 
 ---
 
-## Level Up to the Full 7-Piece Stack: `agy-super-agent`
+## Level Up to the Full 7-Piece Stack: [`agy-super-agent`](https://github.com/OpentoolRadar/agy-super-agent)
 
-These 6 plugins turn a single Antigravity window into a sharp, resilient workstation. When you are ready to orchestrate **many repositories continuously across desktop and remote/mobile workflows**, pair this pack with our companion architecture project **`agy-super-agent`**:
+These 6 plugins turn a single Antigravity window into a sharp, resilient workstation. When you are ready to orchestrate **many repositories continuously across desktop and remote/mobile workflows**, pair this pack with our companion architecture project **[`agy-super-agent`](https://github.com/OpentoolRadar/agy-super-agent)**:
 
 - **Always-on Chief Router** that stays cleanly separated from implementation noise by dispatching isolated workspace sessions and subagents.
 - **Multi-tier persistent memory & task board** with full-text search so cross-day decisions survive across workspaces.
 - **Scoped autonomy, audit logs, and kill-switch circuit breakers** for safe unattended execution.
 - **Remote companion hub & low-noise notifications** for checking long-running jobs away from your desk.
 
-Together, **`agy-power-pack` (6 plugins) + `agy-super-agent`** form a complete 7-piece power-user stack for Google Antigravity.
+Together, **`agy-power-pack` (6 plugins) + [`agy-super-agent`](https://github.com/OpentoolRadar/agy-super-agent)** form a complete 7-piece power-user stack for Google Antigravity.
 
 ---
 
